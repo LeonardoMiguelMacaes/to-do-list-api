@@ -38,7 +38,7 @@ public class TodoController {
         return todoService.updateById(id, todo);
     }
 
-    @PutMapping("/set-status/{id}")
+    @PatchMapping("/set-status/{id}")
     List<Todo> updateStatus(@PathVariable("id") Long id, @RequestBody Boolean isDone) {
         return todoService.updateStatus(id, isDone);
     }
